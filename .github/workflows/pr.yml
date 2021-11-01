@@ -1,7 +1,6 @@
 name: "Run snippets"
 on:
   pull_request:
-      - main
 
 jobs:
   tests:
