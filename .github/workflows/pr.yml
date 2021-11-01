@@ -1,0 +1,16 @@
+name: "Run snippets"
+on:
+  pull_request:
+      - main
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: cachix/install-nix-action@v14
+      with:
+        nix_path: nixpkgs=channel:nixos-unstable
+        extra_nix_config: |
+          experimental-features = nix-command flakes
+    - run: ./scripts/ci/test.sh
