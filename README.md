@@ -5,6 +5,12 @@ Welcome to nix-snippets!
 This project aspires to become a community curation of simple Nix expression language snippets.
 It seeks to boost your confidence understanding Nix as a language and ecosystem.
 
+## contributing
+
+We most appreciate it!
+
+See [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md)
+
 ## credits
 
 The original author has benefited from these projects:
