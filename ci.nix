@@ -10,7 +10,7 @@ builtins.mapAttrs
           buildInputs = [ pkgs.nushell ];
         } ''
         env
-        nu ${self}/scripts/run-all.nu > $out
+        nu scripts/run-all.nu > $out
       '';
     }
   )
