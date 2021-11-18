@@ -9,8 +9,8 @@ builtins.mapAttrs
         {
           buildInputs = [ pkgs.nushell ];
         } ''
-        ls -l
-        exit 0
+        nu --version
+        mkdir $out
       '';
     }
   )
