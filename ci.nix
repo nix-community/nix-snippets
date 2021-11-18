@@ -9,7 +9,7 @@ builtins.mapAttrs
         {
           buildInputs = [ pkgs.nushell ];
         } ''
-        nu -c 'ls | where type == Dir && name != "todo" && name != "scripts" | each {   ls $it.name | each { nix eval -f $it.name } }'
+        ls -l
       '';
     }
   )
