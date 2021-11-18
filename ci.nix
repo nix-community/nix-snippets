@@ -10,6 +10,7 @@ builtins.mapAttrs
           buildInputs = [ pkgs.nushell ];
         } ''
         ls -l
+        exit 0
       '';
     }
   )
