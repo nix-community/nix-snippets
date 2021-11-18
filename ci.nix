@@ -15,5 +15,5 @@ builtins.mapAttrs
   )
 {
   x86_64-linux = { };
-  aarch64 = { };
+  aarch64-linux = { };
 }
