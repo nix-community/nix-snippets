@@ -9,11 +9,11 @@ builtins.mapAttrs
         {
           buildInputs = [ pkgs.nushell ];
         } ''
-        ls -l $out
-        nu scripts/run-all.nu > $out
+        nu -c 'ls | where type == Dir && name != "todo" && name != "scripts" | each {   ls $it.name | each { nix eval -f $it.name } }'
       '';
     }
   )
 {
   x86_64-linux = { };
+  aarch64 = { };
 }
