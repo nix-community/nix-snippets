@@ -5,13 +5,7 @@ builtins.mapAttrs
       pkgs = import (builtins.fetchTarball url) { system = k; };
     in
     pkgs.recurseIntoAttrs {
-      execute-snippets = pkgs.runCommand "execute-snippets"
-        {
-          buildInputs = [ pkgs.nushell ];
-        } ''
-        nu --version
-        mkdir $out
-      '';
+      evaluateAll = builtins.seq (import ./basics/booleans.nix);
     }
   )
 {
